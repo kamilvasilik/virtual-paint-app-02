@@ -1,0 +1,1 @@
+web: gunicorn virtualpaintproject.wsgi --log-file -
