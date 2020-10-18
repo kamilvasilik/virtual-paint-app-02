@@ -21,12 +21,12 @@ def index_select(request):
                                 huemax=hmax, satmax=smax, valmax=vmax,
                                 B=colors[0][6], G=colors[0][7], R=colors[0][8])
         newColor.save()
-        return render(request, 'index_select.html')
+        return render(request, 'Define-Color.html')
     else:
-        return render(request, 'index_select.html')
+        return render(request, 'Define-Color.html')
 
 def how_to_paint(request):
-    return render(request, 'how_to_paint.html')
+    return render(request, 'How-to-paint.html', {'colorCount': len(ChosenColors.objects.all())})
 
 def delete_colors(request):
     old_colors = ChosenColors.objects.all()
@@ -34,7 +34,7 @@ def delete_colors(request):
         for i in range(len(old_colors)):
             to_del = old_colors.get(id=old_colors.first().id)
             to_del.delete()
-    return render(request, 'index.html', {'colorCount': len(ChosenColors.objects.all())})
+    return render(request, 'Virtual-Paint.html', {'colorCount': len(ChosenColors.objects.all())})
 
 
 def gen(camera):
