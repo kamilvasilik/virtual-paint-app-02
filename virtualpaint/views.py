@@ -16,7 +16,7 @@ def index_select(request):
         vmin = int(request.POST['valmin'])
         vmax = int(request.POST['valmax'])
         colors = PickColor([hmin, smin, vmin, hmax, smax, vmax])
-        print(colors)
+        # print(colors)
         newColor = ChosenColors(huemin=hmin, satmin=smin, valmin=vmin,
                                 huemax=hmax, satmax=smax, valmax=vmax,
                                 B=colors[0][6], G=colors[0][7], R=colors[0][8])
