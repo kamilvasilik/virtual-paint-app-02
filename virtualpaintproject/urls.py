@@ -21,7 +21,7 @@ from virtualpaint.views import index, index_select, vp_draw, delete_colors, how_
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index, name='index'),
+    path('', index, name='index'),
     path('index_select/', index_select, name='index_select'),
     path('delete_colors/', delete_colors, name='delete_colors'),
     path('vp_draw/', vp_draw, name='vp_draw'),

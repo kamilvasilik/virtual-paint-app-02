@@ -5,7 +5,7 @@ from .virtual_paint_02 import VirtualPaint02, PickColor
 
 def index(request):
     num_of_colors_defined = len(ChosenColors.objects.all())
-    return render(request, 'index.html', {'colorCount': num_of_colors_defined})
+    return render(request, 'Virtual-Paint.html', {'colorCount': num_of_colors_defined})
 
 def index_select(request):
     if request.method == 'POST':
